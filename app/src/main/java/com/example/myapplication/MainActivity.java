@@ -1,4 +1,5 @@
-package com.example.gastonsaillen.firebaseantut;
+package  com.example.myapplication;
+
 
 
 import android.Manifest;
@@ -6,22 +7,20 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 
-import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
 
-import androidx.core.app.ActivityCompat
-import androidx.core.app.Acts.location.FusedLocationProviderClient;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 
 import com.example.myapplication.MapsActivity;
 import com.example.myapplication.R;
-import com.google.android.gmivityCompat
+import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
@@ -44,14 +43,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate (savedInstanceState);
-        setContentView(R.layout.activity_main;
+        setContentView(R.layout.activity_main);
 
 
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         subirLatLongFirebase();
-        mBtnMaps = findViewByid(R.id.btnMaps);
+        mBtnMaps = findViewById(R.id.btnMaps);
 
 
     }

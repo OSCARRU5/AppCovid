@@ -15,6 +15,11 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 import java.util.ArrayList;
@@ -23,7 +28,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private DatabaseReference mDatabase;
-    private ArrayList<Marker> tmpRealTimeMarkers = new ArrayList<>(;
+    private ArrayList<Marker> tmpRealTimeMarkers = new ArrayList<>();
     private ArrayList<Marker> RealTimeMarkers = new ArrayList<>();
 
 
